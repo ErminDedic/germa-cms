@@ -1,0 +1,12 @@
+.sw-cms-el-config-image-slider {
+    .sw-cms-el-config-image-slider__setting-option {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 0 32px;
+    }
+
+    .sw-cms-el-config-image-slider__settings-link {
+        padding-top: 30px;
+        border-top: 2px solid #d1d9e0;
+    }
+}

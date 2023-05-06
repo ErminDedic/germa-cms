@@ -1,0 +1,44 @@
+@import "~scss/variables";
+
+.sw-cms-link-field {
+    background-color: $color-gray-50;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+
+    .url-field-container {
+        grid-column: 1 / 3;
+
+        &.add-margin {
+            margin-bottom: 25px;
+        }
+
+        > .sw-field {
+
+            &:first-child {
+                margin-bottom: 5px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .sw-field {
+        margin-bottom: 10px;
+    }
+
+    .sw-field--switch {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        .sw-field--switch__content {
+            background: $color-gray-50;
+        }
+    }
+
+
+}

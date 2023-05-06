@@ -1,0 +1,10 @@
+{% block sw_cms_element_image_config_link %}
+    {% parent %}
+
+    <sw-field
+        v-model="element.config.roundedCorners.value"
+        class="sw-cms-el-image__rounded-corners"
+        type="switch"
+        :label="$tc('sw-cms.elements.image.config.label.roundedCorners')"
+    />
+{% endblock %}

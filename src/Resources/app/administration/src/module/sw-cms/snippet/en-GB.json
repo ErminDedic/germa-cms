@@ -1,0 +1,25 @@
+{
+    "sw-cms": {
+        "elements": {
+            "image-slider": {
+                "config": {
+                    "label": {
+                        "linkTo": "Link To",
+                        "itemsXs": "Items per slide (XS)",
+                        "itemsSm": "Items per slide (SM)",
+                        "itemsMd": "Items per slide (MD)",
+                        "itemsLg": "Items per slide (LG)",
+                        "itemsXl": "Items per slide (XL)",
+                        "text": "Text over image",
+                        "gutter": "Gutter (padding between slides)"
+                    }
+                }
+            }
+        },
+        "blocks": {
+            "germa-elements": {
+                
+            }
+        }
+    }
+}
