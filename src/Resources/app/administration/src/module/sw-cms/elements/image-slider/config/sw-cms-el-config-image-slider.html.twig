@@ -1,0 +1,74 @@
+<!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
+{% block sw_cms_element_image_slider_config_settings_link_url %}
+    <sw-field
+        :key="sliderItem.mediaId"
+        v-model="sliderItem.url"
+        class="sw-cms-el-config-image-slider__settings-link-input"
+        :name="sliderItem.mediaUrl"
+        type="text"
+        :label="$tc('sw-cms.elements.image-slider.config.label.linkTo')"
+        :placeholder="$tc('sw-cms.elements.image.config.placeholder.enterUrl')"
+    >
+        <template #prefix>
+            <img
+                v-if="sliderItem.mediaUrl"
+                class="sw-cms-el-config-image-slider__settings-link-prefix"
+                :src="sliderItem.mediaUrl"
+                alt=""
+            >
+        </template>
+    </sw-field>
+{% endblock %}
+
+{% block sw_cms_element_image_slider_config_settings_link_target %}
+    {% parent %}
+
+    <sw-text-editor
+        v-model="sliderItem.text"
+        :name="sliderItem.text"
+        class="sw-cms-el-config-image-slider__settings-text"
+        :label="$tc('sw-cms.elements.image-slider.config.label.text')"
+        :allow-inline-data-mapping="true"
+        sanitize-input
+    />
+{% endblock %}
+
+{% block sw_cms_element_image_gallery_config_settings_vertical_align %}
+    {% parent %}
+
+    <sw-field
+        v-model="element.config.itemsXs.value"
+        :label="$tc('sw-cms.elements.image-slider.config.label.itemsXs')"
+        type="text"
+    />
+
+    <sw-field
+        v-model="element.config.itemsSm.value"
+        :label="$tc('sw-cms.elements.image-slider.config.label.itemsSm')"
+        type="text"
+    />
+
+    <sw-field
+        v-model="element.config.itemsMd.value"
+        :label="$tc('sw-cms.elements.image-slider.config.label.itemsMd')"
+        type="text"
+    />
+
+    <sw-field
+        v-model="element.config.itemsLg.value"
+        :label="$tc('sw-cms.elements.image-slider.config.label.itemsLg')"
+        type="text"
+    />
+
+    <sw-field
+        v-model="element.config.itemsXl.value"
+        :label="$tc('sw-cms.elements.image-slider.config.label.itemsXl')"
+        type="text"
+    />
+
+    <sw-field
+        v-model="element.config.gutter.value"
+        :label="$tc('sw-cms.elements.image-slider.config.label.gutter')"
+        type="text"
+    />
+{% endblock %}

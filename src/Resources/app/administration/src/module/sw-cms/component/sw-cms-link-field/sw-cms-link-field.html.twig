@@ -1,0 +1,40 @@
+{% block sw_cms_link_field %}
+    <div class="sw-cms-link-field">
+        <h3>{{ sectionTitle }}</h3>
+        <div class="url-field-container" :class="hasCategory === false ? 'add-margin' : ''">
+            <sw-entity-single-select
+                entity="category"
+                v-if="isEntity === true"
+                v-model="entityValue"
+                :label="$tc('sw-cms.components.sw-cms-linkField.categoryLabel')"
+                :placeholder="$tc('sw-cms.components.sw-cms-linkField.categoryPlaceholder')">
+            </sw-entity-single-select>
+            <sw-url-field
+                v-model="urlValue"
+                v-else
+                :label="$tc('sw-cms.components.sw-cms-linkField.urlLabel')">
+            </sw-url-field>
+            <sw-switch-field
+                :label="$tc('sw-cms.components.sw-cms-linkField.hasCategoryLabel')"
+                v-if="hasCategory === true"
+                v-model="isEntityValue">
+            </sw-switch-field>
+        </div>
+        <sw-field
+            v-model="textValue"
+            type="text"
+            :label="$tc('sw-cms.components.sw-cms-linkField.textLabel')"
+            :placeholder="$tc('sw-cms.components.sw-cms-linkField.textPlaceholder')">
+        </sw-field>
+        <sw-field
+            v-model="titleValue"
+            type="text"
+            :label="$tc('sw-cms.components.sw-cms-linkField.titleLabel')"
+            :placeholder="$tc('sw-cms.components.sw-cms-linkField.titlePlaceholder')">
+        </sw-field>
+        <sw-switch-field
+            :label="$tc('sw-cms.components.sw-cms-linkField.newTabLabel')"
+            v-model="newTabValue">
+        </sw-switch-field>
+    </div>
+{% endblock %}
