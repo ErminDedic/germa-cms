@@ -1,1 +1,9 @@
-@import './element/cms-element-image-slider'
+@import './element/cms-element-image-slider';
+
+.cms-section {
+    height: 100vw;
+}
+
+.fp-watermark {
+    display: none;
+}
